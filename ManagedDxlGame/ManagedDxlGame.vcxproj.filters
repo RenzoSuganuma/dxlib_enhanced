@@ -227,6 +227,15 @@
     <ClCompile Include="program\dxe\dxe_input.cpp">
       <Filter>program\[001] dxe</Filter>
     </ClCompile>
+    <ClCompile Include="..\sgl\sgl_scene.cpp">
+      <Filter>program\[005]engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sgl\sgl_gameObject.cpp">
+      <Filter>program\[005]engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sgl\sgl_component.cpp">
+      <Filter>program</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManagedDxlGame.rc">
@@ -548,17 +557,12 @@
     <ClInclude Include="program\example\beginner\170_exa_intersect_csv_field_chip.h">
       <Filter>program\[002] example\[001] beginner</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\RunTime\sgl_scene.h">
+    <ClInclude Include="..\sgl\sgl_scene.h">
       <Filter>program\[005]engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\RunTime\sgl_gameobject.h">
+    <ClInclude Include="..\sgl\sgl_gameObject.h">
       <Filter>program\[005]engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\RunTime\sgl_component.h">
-      <Filter>program\[005]engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Engine\RunTime\sgl_vector3.h">
-      <Filter>program\[005]engine</Filter>
-    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_component.h" />
   </ItemGroup>
 </Project>
