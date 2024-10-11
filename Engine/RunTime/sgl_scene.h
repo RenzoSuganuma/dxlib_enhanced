@@ -23,7 +23,14 @@ namespace sgl {
 
 		void init();
 		void draw();
-		void update();
+		void update() {
+			auto itr = gameObjects_.begin();
+			while (itr != gameObjects_.end()) {
+				(*itr).get()->update();
+
+				itr++;
+			}
+		}
 		void cleanup() {
 			auto itr = gameObjects_.begin();
 			while (itr != gameObjects_.end()) {

@@ -215,7 +215,6 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Engine\RunTime\sgl_goFramework.h" />
     <ClInclude Include="..\Engine\RunTime\sgl_component.h" />
     <ClInclude Include="..\Engine\RunTime\sgl_gameobject.h" />
     <ClInclude Include="..\Engine\RunTime\sgl_scene.h" />

@@ -560,8 +560,5 @@
     <ClInclude Include="..\Engine\RunTime\sgl_vector3.h">
       <Filter>program\[005]engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\RunTime\sgl_goFramework.h">
-      <Filter>program\[005]engine</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
