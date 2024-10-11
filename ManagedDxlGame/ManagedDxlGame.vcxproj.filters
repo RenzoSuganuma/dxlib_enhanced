@@ -48,6 +48,9 @@
     <Filter Include="program\[002] example\[002] 2D">
       <UniqueIdentifier>{a3b97536-966c-4921-a47e-26d1d17a507c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="program\[005]engine">
+      <UniqueIdentifier>{60bcfb18-292e-4c88-86f1-92cb6a0fbecf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ManagedDxlGame.cpp">
@@ -544,6 +547,21 @@
     </ClInclude>
     <ClInclude Include="program\example\beginner\170_exa_intersect_csv_field_chip.h">
       <Filter>program\[002] example\[001] beginner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\RunTime\sgl_scene.h">
+      <Filter>program\[005]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\RunTime\sgl_gameobject.h">
+      <Filter>program\[005]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\RunTime\sgl_component.h">
+      <Filter>program\[005]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\RunTime\sgl_vector3.h">
+      <Filter>program\[005]engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\RunTime\sgl_goFramework.h">
+      <Filter>program\[005]engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

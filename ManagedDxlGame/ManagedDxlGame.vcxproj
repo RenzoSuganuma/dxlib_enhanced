@@ -215,6 +215,11 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Engine\RunTime\sgl_goFramework.h" />
+    <ClInclude Include="..\Engine\RunTime\sgl_component.h" />
+    <ClInclude Include="..\Engine\RunTime\sgl_gameobject.h" />
+    <ClInclude Include="..\Engine\RunTime\sgl_scene.h" />
+    <ClInclude Include="..\Engine\RunTime\sgl_vector3.h" />
     <ClInclude Include="program\dxe\dxe.h" />
     <ClInclude Include="program\dxe\dxe_camera.h" />
     <ClInclude Include="program\dxe\dxe_data.h" />
