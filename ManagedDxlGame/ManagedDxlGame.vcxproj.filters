@@ -48,8 +48,8 @@
     <Filter Include="program\[002] example\[002] 2D">
       <UniqueIdentifier>{a3b97536-966c-4921-a47e-26d1d17a507c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="program\[005]engine">
-      <UniqueIdentifier>{60bcfb18-292e-4c88-86f1-92cb6a0fbecf}</UniqueIdentifier>
+    <Filter Include="program\[005]sgl">
+      <UniqueIdentifier>{272f1cac-e13d-4ac2-98ef-ce93be663c6d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -227,14 +227,23 @@
     <ClCompile Include="program\dxe\dxe_input.cpp">
       <Filter>program\[001] dxe</Filter>
     </ClCompile>
-    <ClCompile Include="..\sgl\sgl_scene.cpp">
-      <Filter>program\[005]engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sgl\sgl_gameObject.cpp">
-      <Filter>program\[005]engine</Filter>
+    <ClCompile Include="..\sgl\sgl_actor.cpp">
+      <Filter>program\[005]sgl</Filter>
     </ClCompile>
     <ClCompile Include="..\sgl\sgl_component.cpp">
-      <Filter>program\[005]engine</Filter>
+      <Filter>program\[005]sgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sgl\sgl_inputHandler.cpp">
+      <Filter>program\[005]sgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sgl\sgl_level.cpp">
+      <Filter>program\[005]sgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sgl\sgl_soundHandler.cpp">
+      <Filter>program\[005]sgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sgl\sgl_windowHandler.cpp">
+      <Filter>program\[005]sgl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -557,14 +566,32 @@
     <ClInclude Include="program\example\beginner\170_exa_intersect_csv_field_chip.h">
       <Filter>program\[002] example\[001] beginner</Filter>
     </ClInclude>
-    <ClInclude Include="..\sgl\sgl_scene.h">
-      <Filter>program\[005]engine</Filter>
+    <ClInclude Include="..\sgl\sgl_actor.h">
+      <Filter>program\[005]sgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\sgl\sgl_gameObject.h">
-      <Filter>program\[005]engine</Filter>
+    <ClInclude Include="..\sgl\sgl_actorUtilities.h">
+      <Filter>program\[005]sgl</Filter>
     </ClInclude>
     <ClInclude Include="..\sgl\sgl_component.h">
-      <Filter>program\[005]engine</Filter>
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_inputHandler.hpp">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_lang_extention.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_level.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_soundHandler.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_vector3.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_windowHandler.h">
+      <Filter>program\[005]sgl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

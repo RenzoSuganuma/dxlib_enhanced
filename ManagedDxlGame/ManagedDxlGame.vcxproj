@@ -148,9 +148,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\sgl\sgl_actor.cpp" />
     <ClCompile Include="..\sgl\sgl_component.cpp" />
-    <ClCompile Include="..\sgl\sgl_gameObject.cpp" />
-    <ClCompile Include="..\sgl\sgl_scene.cpp" />
+    <ClCompile Include="..\sgl\sgl_inputHandler.cpp" />
+    <ClCompile Include="..\sgl\sgl_level.cpp" />
+    <ClCompile Include="..\sgl\sgl_soundHandler.cpp" />
+    <ClCompile Include="..\sgl\sgl_windowHandler.cpp" />
     <ClCompile Include="ManagedDxlGame.cpp" />
     <ClCompile Include="program\dxe\dxe.cpp" />
     <ClCompile Include="program\dxe\dxe_camera.cpp" />
@@ -218,9 +221,15 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\sgl\sgl_actor.h" />
+    <ClInclude Include="..\sgl\sgl_actorUtilities.h" />
     <ClInclude Include="..\sgl\sgl_component.h" />
-    <ClInclude Include="..\sgl\sgl_gameObject.h" />
-    <ClInclude Include="..\sgl\sgl_scene.h" />
+    <ClInclude Include="..\sgl\sgl_inputHandler.hpp" />
+    <ClInclude Include="..\sgl\sgl_lang_extention.h" />
+    <ClInclude Include="..\sgl\sgl_level.h" />
+    <ClInclude Include="..\sgl\sgl_soundHandler.h" />
+    <ClInclude Include="..\sgl\sgl_vector3.h" />
+    <ClInclude Include="..\sgl\sgl_windowHandler.h" />
     <ClInclude Include="program\dxe\dxe.h" />
     <ClInclude Include="program\dxe\dxe_camera.h" />
     <ClInclude Include="program\dxe\dxe_data.h" />
