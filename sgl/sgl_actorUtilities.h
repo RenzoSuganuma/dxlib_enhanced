@@ -21,7 +21,6 @@ public:
 			}
 			it++;
 		}
-
 		return nullptr;
 	}
 };

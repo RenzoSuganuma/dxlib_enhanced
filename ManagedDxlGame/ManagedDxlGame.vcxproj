@@ -223,6 +223,7 @@
   <ItemGroup>
     <ClInclude Include="..\sgl\sgl_actor.h" />
     <ClInclude Include="..\sgl\sgl_actorUtilities.h" />
+    <ClInclude Include="..\sgl\sgl_collisionUtility.h" />
     <ClInclude Include="..\sgl\sgl_component.h" />
     <ClInclude Include="..\sgl\sgl_inputHandler.h" />
     <ClInclude Include="..\sgl\sgl_lang_extention.h" />

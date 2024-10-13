@@ -8,7 +8,6 @@
 // 前方定義
 class Level;
 class Component;
-class CircleCollider;
 
 // ゲーム内のオブジェクトとして扱うクラスの基底クラス
 class Actor {

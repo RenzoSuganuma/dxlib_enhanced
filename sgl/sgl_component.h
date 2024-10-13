@@ -27,7 +27,6 @@ public:
 	void Tick(float deltaTime);
 	void End();
 	void Draw();
-
 	const Actor* const GetActor() const;
 	void const SetActor(const Actor* actor);
 };

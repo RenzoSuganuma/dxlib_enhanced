@@ -9,6 +9,7 @@
 #include "../../sgl/sgl_level.h"
 #include "../../sgl/sgl_actor.h"
 #include "../../sgl/sgl_component.h"
+#include "../../sgl/sgl_collisionUtility.h"
 
 auto level = Level::Create();
 auto actor = Actor::Create();
@@ -32,6 +33,8 @@ void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
 
 	level->MainLoopUpdate(delta_time);
+
+	DrawFormatString(10, 50, -1, "%s", sgl::intersection::CircleIntersection2D({ 0,0,0 }, { 2,0,0 }, 1, 1) ? "yes" : "no");
 }
 
 
