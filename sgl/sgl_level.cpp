@@ -43,8 +43,9 @@ void const Level::MainLoopExit()
 }
 
 const std::list< Actor* >::iterator
-const Level::AddObject(const Actor* newObject)
+const Level::AddActor(const Actor* newObject)
 {
+	const_cast<Actor*>(newObject)->SetPlacedLevel(this);
 	objects_.emplace_back(const_cast<Actor*>(newObject));
 	auto it = objects_.end();
 	it--;

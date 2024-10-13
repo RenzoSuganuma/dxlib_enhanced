@@ -575,7 +575,7 @@
     <ClInclude Include="..\sgl\sgl_component.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\sgl\sgl_inputHandler.hpp">
+    <ClInclude Include="..\sgl\sgl_inputHandler.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
     <ClInclude Include="..\sgl\sgl_lang_extention.h">

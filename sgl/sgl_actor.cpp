@@ -67,21 +67,6 @@ void Actor::Draw()
 	Draw_();
 }
 
-void Actor::OnBeginOverlap(const CircleCollider* other)
-{
-	OnBeginOverlap_(other);
-}
-
-void Actor::OnStillOverlap(const CircleCollider* other)
-{
-	OnStillOverlap_(other);
-}
-
-void Actor::OnEndOverlap(const CircleCollider* other)
-{
-	OnEndOverlap_(other);
-}
-
 std::list< Component* >::iterator
 const Actor::AddComponent(Component* component)
 {

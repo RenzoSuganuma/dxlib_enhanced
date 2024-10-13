@@ -14,7 +14,7 @@ public:
 	Level();
 	~Level();
 
-	static const Level* Create() {
+	static Level* Create() {
 		return new Level;
 	}
 
@@ -22,7 +22,7 @@ public:
 	void const MainLoopUpdate(float deltaTime);
 	void const MainLoopExit();
 	const std::list< Actor* >::iterator
-		const AddObject(const Actor * newObject);
+		const AddActor(const Actor * newObject);
 	void const RemoveObject(const Actor * obj);
 	void const RemoveObject(const std::list< Actor* >::iterator place);
 };

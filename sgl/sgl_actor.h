@@ -33,7 +33,7 @@ public:
 	void End();
 	void Draw();
 
-	static const Actor* Create() {
+	static Actor* Create() {
 		return new Actor;
 	}
 

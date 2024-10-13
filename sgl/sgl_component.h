@@ -19,7 +19,7 @@ public:
 	Component();
 	~Component();
 
-	static const Component* Create() {
+	static Component* Create() {
 		return new Component;
 	}
 
