@@ -35,7 +35,7 @@ void const Level::MainLoopExit()
 
 	while (it != objects_.end())
 	{
-		delete (*it);
+		(*it)->End();
 		++it;
 	}
 

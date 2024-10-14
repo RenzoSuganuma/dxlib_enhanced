@@ -10,7 +10,7 @@
 #include "../../sgl/sgl_actor.h"
 #include "../../sgl/sgl_component.h"
 #include "../../sgl/sgl_collisionUtility.h"
-
+// 宣言
 auto level = Level::Create();
 auto actor = Actor::Create();
 auto component = Component::Create();

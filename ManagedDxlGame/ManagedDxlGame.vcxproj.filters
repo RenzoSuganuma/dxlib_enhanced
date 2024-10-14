@@ -51,6 +51,9 @@
     <Filter Include="program\[005]sgl">
       <UniqueIdentifier>{272f1cac-e13d-4ac2-98ef-ce93be663c6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="program\[006]game_sources">
+      <UniqueIdentifier>{d3ebe9d1-5dc9-4a80-824d-9af14b687f86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ManagedDxlGame.cpp">
