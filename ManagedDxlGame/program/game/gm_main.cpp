@@ -10,7 +10,7 @@
 #include "../../sgl/sgl_actor.h"
 #include "../../sgl/sgl_component.h"
 #include "../../sgl/sgl_collisionUtility.h"
-// 宣言
+// ゲーム変数宣言---
 auto level = Level::Create();
 auto actor = Actor::Create();
 auto component = Component::Create();
@@ -19,10 +19,9 @@ auto component = Component::Create();
 // ゲーム起動時に１度だけ実行されます
 void gameStart() {
 	srand(time(0));
-
+	// ゲーム変数セットアップ---
 	actor->AddComponent(component);
 	level->AddActor(actor);
-
 	level->MainLoopEntry();
 }
 
@@ -31,7 +30,6 @@ void gameStart() {
 // 毎フレーム実行されます
 void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
-
 	level->MainLoopUpdate(delta_time);
 }
 
@@ -40,7 +38,6 @@ void gameMain(float delta_time) {
 // ゲーム終了時に１度だけ実行されます
 void gameEnd() {
 	level->MainLoopExit();
-
 	delete level;
 }
 
