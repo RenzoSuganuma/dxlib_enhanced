@@ -9,9 +9,9 @@ public:
 	template<typename T>
 	static T GetComponent(const Actor * getComponentFrom)
 	{
-		auto it = getComponentFrom->attachedComponents_.begin();
+		auto it = getComponentFrom->components_.begin();
 
-		while (it != getComponentFrom->attachedComponents_.end())
+		while (it != getComponentFrom->components_.end())
 		{
 			auto r = static_cast<T>(*it);
 			if (r != nullptr)

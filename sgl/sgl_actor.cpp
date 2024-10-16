@@ -15,8 +15,8 @@ void Actor::Draw_() {}
 
 void Actor::Begin()
 {
-	auto it = attachedComponents_.begin();
-	while (it != attachedComponents_.end())
+	auto it = components_.begin();
+	while (it != components_.end())
 	{
 		(*it)->Begin();
 		it++;
@@ -29,8 +29,8 @@ void Actor::Begin()
 
 void Actor::Tick(float deltaTime)
 {
-	auto it = attachedComponents_.begin();
-	while (it != attachedComponents_.end())
+	auto it = components_.begin();
+	while (it != components_.end())
 	{
 		(*it)->Tick(deltaTime);
 		it++;
@@ -41,14 +41,14 @@ void Actor::Tick(float deltaTime)
 
 void Actor::End()
 {
-	auto it = attachedComponents_.begin();
-	while (it != attachedComponents_.end())
+	auto it = components_.begin();
+	while (it != components_.end())
 	{
 		(*it)->End();
 		it++;
 	}
 
-	attachedComponents_.clear();
+	components_.clear();
 	enabled_ = false;
 	placedLevel_ = nullptr;
 
@@ -57,8 +57,8 @@ void Actor::End()
 
 void Actor::Draw()
 {
-	auto it = attachedComponents_.begin();
-	while (it != attachedComponents_.end())
+	auto it = components_.begin();
+	while (it != components_.end())
 	{
 		(*it)->Draw();
 		it++;
@@ -71,8 +71,8 @@ std::list< Component* >::iterator
 const Actor::AddComponent(Component* component)
 {
 	component->SetActor(this);
-	attachedComponents_.emplace_back(component);
-	auto it = attachedComponents_.end();
+	components_.emplace_back(component);
+	auto it = components_.end();
 	it--;
 
 	return it;
@@ -80,7 +80,7 @@ const Actor::AddComponent(Component* component)
 
 void const Actor::RemoveComponent(const std::list<Component*>::iterator place)
 {
-	attachedComponents_.erase(place);
+	components_.erase(place);
 }
 
 void const Actor::SetPosition(sgl::Vector3 newPos)

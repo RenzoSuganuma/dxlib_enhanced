@@ -21,7 +21,7 @@ protected:
 	virtual void End_();
 	virtual void Draw_();
 public:
-	std::list< Component* > attachedComponents_;
+	std::list< Component* > components_;
 	std::string name_ = "";
 	bool enabled_ = true;
 
