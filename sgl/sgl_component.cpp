@@ -15,7 +15,6 @@ void Component::Draw_(){}
 void Component::Begin()
 {
 	enabled_ = true;
-
 	Begin_();
 }
 
@@ -28,7 +27,6 @@ void Component::End()
 {
 	attachedActor_ = nullptr;
 	enabled_ = false;
-
 	End_();
 }
 

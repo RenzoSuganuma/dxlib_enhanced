@@ -14,7 +14,7 @@ class Actor {
 protected:
 	sgl::Vector3 position_{ 0 };
 	sgl::Vector3 rotation_{ 0 };
-	Level* placedLevel_;
+	Level* placedLevel_ = nullptr;
 
 	virtual void Begin_();
 	virtual void Tick_(float deltaTime);

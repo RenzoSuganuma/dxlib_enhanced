@@ -22,7 +22,7 @@ public:
 	void const MainLoopUpdate(float deltaTime);
 	void const MainLoopExit();
 	const std::list< Actor* >::iterator
-		const AddActor(const Actor * newObject);
-	void const RemoveObject(const Actor * obj);
-	void const RemoveObject(const std::list< Actor* >::iterator place);
+		const AddActor(const Actor * obj);
+	void const RemoveActor(const Actor * obj);
+	void const RemoveActor(const std::list< Actor* >::iterator place);
 };

@@ -21,9 +21,7 @@ void Actor::Begin()
 		(*it)->Begin();
 		it++;
 	}
-
 	enabled_ = true;
-
 	Begin_();
 }
 
@@ -35,7 +33,6 @@ void Actor::Tick(float deltaTime)
 		(*it)->Tick(deltaTime);
 		it++;
 	}
-
 	Tick_(deltaTime);
 }
 
@@ -47,11 +44,9 @@ void Actor::End()
 		(*it)->End();
 		it++;
 	}
-
 	components_.clear();
 	enabled_ = false;
 	placedLevel_ = nullptr;
-
 	End_();
 }
 
@@ -63,7 +58,6 @@ void Actor::Draw()
 		(*it)->Draw();
 		it++;
 	}
-
 	Draw_();
 }
 
@@ -74,7 +68,6 @@ const Actor::AddComponent(Component* component)
 	components_.emplace_back(component);
 	auto it = components_.end();
 	it--;
-
 	return it;
 }
 
