@@ -23,7 +23,9 @@ namespace sgl::intersection {
 
 		static OBBCollider* Create(sgl::Vector3 center, sgl::Vector3 direction, sgl::Vector3 extents) {
 			auto instance = new OBBCollider;
-			
+			instance->setCenter(center);
+			instance->setDirection(direction);
+			instance->setExtents(extents);
 			return instance;
 		}
 	};
