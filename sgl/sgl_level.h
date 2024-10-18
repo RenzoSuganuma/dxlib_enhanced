@@ -1,10 +1,7 @@
 ﻿#pragma once
-
 #include "list"
-
 // 前方定義
 class Actor;
-
 // Unityでいうシーン、すべてのアクタが存在するクラス。（構造体でもいいかも）
 class Level final {
 private:

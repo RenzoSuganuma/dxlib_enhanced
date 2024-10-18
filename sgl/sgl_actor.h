@@ -1,14 +1,11 @@
 ﻿#pragma once
-
 #include "list"
 #include "string"
 #include "DxLib.h"
 #include "sgl_vector3.h"
-
 // 前方定義
 class Level;
 class Component;
-
 // ゲーム内のオブジェクトとして扱うクラスの基底クラス
 class Actor {
 protected:
