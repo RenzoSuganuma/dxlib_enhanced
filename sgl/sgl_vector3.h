@@ -4,6 +4,7 @@
 #include "math.h"
 #include "sstream"
 #include "stdio.h"
+#include "DirectXMath.h"
 #include "../ManagedDxlGame/program/library/tnl_vector3.h"
 
 namespace sgl {
@@ -17,11 +18,19 @@ namespace sgl {
 		Vector3(float val) { x = y = z = val; }
 		Vector3(float x, float y, float z) : x(x), y(y), z(z) {}
 		// x,y,z成分がすべて１のベクトル
-		static const sgl::Vector3 one() { return { 1 }; }
+		static const sgl::Vector3 one() noexcept { return { 1 }; }
 		// y成分が１のベクトル
-		static const sgl::Vector3 up() { return { 0,1,0 }; }
+		static const sgl::Vector3 up() noexcept { return { 0,1,0 }; }
 		// x成分が１のベクトル
-		static const sgl::Vector3 right() { return { 1,0,0 }; }
+		static const sgl::Vector3 right() noexcept { return { 1,0,0 }; }
+		// DxLib::VECTOR → sgl::Vectorの関数
+		static sgl::Vector3 ToSglVector(const DxLib::VECTOR vec) noexcept {
+			return sgl::Vector3(vec.x, vec.y, vec.z);
+		}
+		// DirectXのベクトルに変換
+		static DirectX::XMVECTOR ToDXVector(const sgl::Vector3& v) noexcept {
+			return DirectX::XMVectorSet(v.x, v.y, v.z, 1.0f);
+		}
 
 		sgl::Vector3 operator+(const sgl::Vector3& other) noexcept {
 			return Vector3(x + other.x, y + other.y, z + other.z);
@@ -115,13 +124,21 @@ namespace sgl {
 			float calc_x = this->x / magnitude;
 			float calc_y = this->y / magnitude;
 			float calc_z = this->z / magnitude;
-
 			return sgl::Vector3(calc_x, calc_y, calc_z);
 		}
 		// 大きさを返す
 		float magnitude() noexcept {
 			float magnitude = sqrtf(x * x + y * y + z * z);
 			return magnitude;
+		}
+		// DirectXのベクトルに変換
+		DirectX::XMVECTOR ToDXVector() noexcept {
+			DirectX::XMVECTOR vec{ x,y,z };
+			return vec;
+		}
+		// tnl::Vectorに変換
+		tnl::Vector3 ToTnlVector() {
+			return tnl::Vector3{ x,y,z };
 		}
 	};
 }
