@@ -140,5 +140,10 @@ namespace sgl {
 		tnl::Vector3 ToTnlVector() {
 			return tnl::Vector3{ x,y,z };
 		}
+		// float配列で返す
+		const float* ToFloatArray() {
+			float arr[3]{ x,y,z };
+			return arr;
+		}
 	};
 }
