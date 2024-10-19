@@ -599,5 +599,8 @@
     <ClInclude Include="..\sgl\sgl_collisionUtility.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
+    <ClInclude Include="..\sgl\sgl_DirectXUtility.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

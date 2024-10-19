@@ -9,15 +9,27 @@
 #include "../../sgl/sgl_level.h"
 #include "../../sgl/sgl_actor.h"
 #include "../../sgl/sgl_component.h"
+#include "../../sgl/sgl_DirectXUtility.h"
 #include "../../sgl/sgl_collisionUtility.h"
+// 名前空間を省略したい
+using sgl::DxUtil;
 // ゲーム変数宣言---
 auto level = Level::Create();
 auto actor = Actor::Create();
 auto component = Component::Create();
-DirectX::BoundingOrientedBox obbA =
-DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(0, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
-DirectX::BoundingOrientedBox obbB =
-DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(3, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
+DxOBB obbA =
+DirectX::BoundingOrientedBox(
+	DxUtil::xm_Float3(0),
+	DxUtil::xm_Float3(1),
+	DxUtil::xm_Float4(0)
+);
+DxOBB obbB =
+DirectX::BoundingOrientedBox(
+	DxUtil::xm_Float3(3,0,0),
+	DxUtil::xm_Float3(1),
+	DxUtil::xm_Float4(0)
+);
+
 //------------------------------------------------------------------------------------------------------------
 // ゲーム起動時に１度だけ実行されます
 void gameStart() {
@@ -34,7 +46,7 @@ void gameStart() {
 void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
 	level->MainLoopUpdate(delta_time);
-	if (sgl::intersection::CheckOBBOverlapDX(obbA, obbB)) {
+	if (sgl::Overlaps::CheckOBBOverlapDX(obbA, obbB)) {
 		DrawString(10, 10, "yes", -1);
 	}
 	else {
