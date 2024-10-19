@@ -23,9 +23,13 @@ namespace sgl {
 		static const sgl::Vector3 up() noexcept { return { 0,1,0 }; }
 		// x成分が１のベクトル
 		static const sgl::Vector3 right() noexcept { return { 1,0,0 }; }
-		// DxLib::VECTOR → sgl::Vectorの関数
+		// DxLib::VECTOR → sgl::Vector3の関数
 		static sgl::Vector3 ToSglVector(const DxLib::VECTOR vec) noexcept {
 			return sgl::Vector3(vec.x, vec.y, vec.z);
+		}
+		// DirectX::XMVECTOR  → sgl::Vector3
+		static sgl::Vector3 ToSglVector(const DirectX::XMVECTOR vec) noexcept {
+			return sgl::Vector3(vec.m128_f32[0], vec.m128_f32[1], vec.m128_f32[2]);
 		}
 		// DirectXのベクトルに変換
 		static DirectX::XMVECTOR ToDXVector(const sgl::Vector3& v) noexcept {

@@ -14,10 +14,10 @@
 auto level = Level::Create();
 auto actor = Actor::Create();
 auto component = Component::Create();
-std::vector< sgl::Vector3 > angles(3, { 0,0,0 });
-std::vector< sgl::Vector3 > angles_ninety(3, { 0,0,0 });
-auto obbA = sgl::intersection::OBBCollider::Create({ 0,0,0 }, angles, sgl::Vector3::one());
-auto obbB = sgl::intersection::OBBCollider::Create({ 0,0,0 }, angles, sgl::Vector3::one());
+DirectX::BoundingOrientedBox obbA =
+DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(0, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
+DirectX::BoundingOrientedBox obbB =
+DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(0, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
 //------------------------------------------------------------------------------------------------------------
 // ゲーム起動時に１度だけ実行されます
 void gameStart() {
@@ -34,7 +34,7 @@ void gameStart() {
 void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
 	level->MainLoopUpdate(delta_time);
-	if (sgl::intersection::CheckOBBOverlap(obbA, obbB)) {
+	if (sgl::intersection::CheckOBBOverlapDX(obbA, obbB)) {
 		DrawString(10, 10, "yes", -1);
 	}
 	else {
