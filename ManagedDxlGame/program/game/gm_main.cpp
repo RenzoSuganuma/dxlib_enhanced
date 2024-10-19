@@ -17,7 +17,7 @@ auto component = Component::Create();
 DirectX::BoundingOrientedBox obbA =
 DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(0, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
 DirectX::BoundingOrientedBox obbB =
-DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(0, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
+DirectX::BoundingOrientedBox(DirectX::XMFLOAT3::XMFLOAT3(3, 0, 0), DirectX::XMFLOAT3::XMFLOAT3(1, 1, 1), DirectX::XMFLOAT4::XMFLOAT4(0, 0, 0, 1));
 //------------------------------------------------------------------------------------------------------------
 // ゲーム起動時に１度だけ実行されます
 void gameStart() {
