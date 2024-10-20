@@ -1,7 +1,13 @@
 ﻿#pragma once
 #include "DirectXCollision.h" // DirectX::BoundingSphere , DirectX::BoundingOrientedBox
-// DirectXのOBB
+// DirectX::BoundingBox AABB
+using DxAABB = DirectX::BoundingBox;
+// DirectX::BoundingOrientedBox OBB
 using DxOBB = DirectX::BoundingOrientedBox;
+// DirectX::BoundingSphere
+using DxBSphere = DirectX::BoundingSphere;
+// DirectX::BoundingFrustum
+using DxBFrustum = DirectX::BoundingFrustum;
 namespace sgl {
 	// DirectXのユーティリティクラス
 	class DxUtil {

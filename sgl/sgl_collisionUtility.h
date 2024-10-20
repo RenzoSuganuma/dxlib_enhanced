@@ -22,5 +22,13 @@ namespace sgl {
 		static const bool CheckOBBOverlapDX(const DirectX::BoundingOrientedBox& a, const DirectX::BoundingOrientedBox& b) {
 			return a.Intersects(b);
 		}
+		// AABBどうしの当たり判定
+		static const bool CheckAABBOverlapDX(const DirectX::BoundingBox& a, const DirectX::BoundingBox& b) {
+			return a.Intersects(b);
+		}
+		// BoundingFrustumどうしの当たり判定
+		static const bool CheckFrustumOverlapDX(const DirectX::BoundingFrustum& a, const DirectX::BoundingFrustum& b) {
+			return a.Intersects(b);
+		}
 	};
 }

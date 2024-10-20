@@ -34,10 +34,12 @@ public:
 	void Draw();
 
 	/* statics */
+	//
 	static Actor* Create() {
 		return new Actor;
 	}
 	/*  */
+	//
 	std::list< Component* >::iterator
 		const AddComponent(Component* component);
 	void const RemoveComponent(const std::list<Component*>::iterator place);
@@ -46,7 +48,8 @@ public:
 	void const SetRotation(sgl::Vector3 newRot);
 	const sgl::Vector3 const GetRotation();
 	void const SetPlacedLevel(const Level* level);
-	/* tmplates */
+	/* templates */
+	//
 	template<typename T>
 	static T GetComponent(const Actor* getComponentFrom)
 	{
