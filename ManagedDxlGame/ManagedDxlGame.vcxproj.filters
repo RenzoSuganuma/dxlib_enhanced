@@ -599,5 +599,11 @@
     <ClInclude Include="..\sgl\sgl_directxUtility.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
+    <ClInclude Include="..\sgl\sgl_sequenceMachine.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_sequenceMachineNode.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

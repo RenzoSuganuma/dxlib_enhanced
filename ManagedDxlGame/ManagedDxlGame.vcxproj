@@ -228,6 +228,8 @@
     <ClInclude Include="..\sgl\sgl_inputHandler.h" />
     <ClInclude Include="..\sgl\sgl_lang_extention.h" />
     <ClInclude Include="..\sgl\sgl_level.h" />
+    <ClInclude Include="..\sgl\sgl_sequenceMachine.h" />
+    <ClInclude Include="..\sgl\sgl_sequenceMachineNode.h" />
     <ClInclude Include="..\sgl\sgl_soundHandler.h" />
     <ClInclude Include="..\sgl\sgl_vector3.h" />
     <ClInclude Include="..\sgl\sgl_windowHandler.h" />

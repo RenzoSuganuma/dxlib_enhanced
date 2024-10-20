@@ -44,5 +44,5 @@ void set##name( const type& value )\
 // std::shared_ptr<T>の宣言を省略したい
 #define DEF_Create_shared_ptr(type)\
 static std::shared_ptr<type> CreateShared() {\
-return std::shared_ptr<type>();\
+return std::make_shared<type>();\
 }\
