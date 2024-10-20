@@ -148,10 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\sgl\sgl_actor.cpp" />
-    <ClCompile Include="..\sgl\sgl_component.cpp" />
     <ClCompile Include="..\sgl\sgl_inputHandler.cpp" />
-    <ClCompile Include="..\sgl\sgl_level.cpp" />
     <ClCompile Include="..\sgl\sgl_soundHandler.cpp" />
     <ClCompile Include="..\sgl\sgl_windowHandler.cpp" />
     <ClCompile Include="ManagedDxlGame.cpp" />
