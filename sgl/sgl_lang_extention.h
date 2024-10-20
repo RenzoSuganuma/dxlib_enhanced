@@ -3,12 +3,12 @@
 #define AutoProperty( type , name , rawValue ) \
 public : \
 const type& get##name() \
-{ \
-	return rawValue; \
-} \
+{\
+	return rawValue;\
+}\
 void set##name( const type& value ) \
 {\
-	 rawValue = value; \
+	 rawValue = value;\
 }\
 
 // C#のプロパティを再現。左から型、変数名（public）、値を受け渡す前の前処理、値を初期化する前の前処理
@@ -17,10 +17,26 @@ public: \
 type name; \
 const type& get##name() \
 {\
-getterbody \
-return name; \
-} \
+	getterbody\
+}\
 void set##name(const type& val) \
-{ \
-setterbody name = val; \
+{\
+	setterbody\
+}\
+
+// C#のゲッターを再現。左から型、変数名（public）、値の本体
+#define Getter( type , name , rawValue ) \
+public: \
+type name; \
+const type& get##name()\
+{\
+	return rawValue;\
+} \
+
+// C#のセッターを再現。左から型、変数名（public）、値の本体
+#define Setter( type , name , rawValue ) \
+public: \
+void set##name( const type& value )\
+{\
+	 rawValue = value;\
 }\

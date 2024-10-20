@@ -1,7 +1,5 @@
 ﻿#pragma once
-
-#include "iostream"
-
+#include "map"
 namespace sgl::runtime::system {
 
 	extern unsigned int windowWidth_;

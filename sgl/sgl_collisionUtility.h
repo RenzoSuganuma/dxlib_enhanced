@@ -7,8 +7,7 @@
 #include "sgl_component.h"
 #include "DirectXCollision.h" // DirectX::BoundingSphere , DirectX::BoundingOrientedBox
 namespace sgl {
-	class Overlaps
-	{
+	class Overlaps {
 	public:
 		// ２円または球の当たり判定
 		static const bool CheckSphereOverlap(sgl::Vector3& pos1, sgl::Vector3& pos2, float r1, float r2) {

@@ -572,9 +572,6 @@
     <ClInclude Include="..\sgl\sgl_actor.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\sgl\sgl_actorUtilities.h">
-      <Filter>program\[005]sgl</Filter>
-    </ClInclude>
     <ClInclude Include="..\sgl\sgl_component.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>

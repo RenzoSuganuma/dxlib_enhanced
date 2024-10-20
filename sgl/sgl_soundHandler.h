@@ -1,8 +1,6 @@
 ﻿#pragma once
-
 #include "list"
 #include "string"
-
 namespace sgl::runtime::system {
 
 	// サウンド再生モード

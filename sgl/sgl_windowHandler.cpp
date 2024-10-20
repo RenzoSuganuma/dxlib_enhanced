@@ -1,6 +1,6 @@
-﻿#include "sgl_windowHandler.h"
+﻿#include "DxLib.h"
 #include "Windows.h"
-#include "DxLib.h"
+#include "sgl_windowHandler.h"
 
 namespace  sgl::runtime::system
 {

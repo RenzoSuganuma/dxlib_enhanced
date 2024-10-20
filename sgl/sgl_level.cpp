@@ -1,7 +1,6 @@
 ﻿#include "DxLib.h"
 #include "sgl_actor.h"
 #include "sgl_level.h"
-#include "sgl_actorUtilities.h"
 
 Level::Level() {}
 Level::~Level() {}

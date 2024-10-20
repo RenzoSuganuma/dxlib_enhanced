@@ -9,8 +9,7 @@
 
 namespace sgl {
 	// 三次元ベクトルを提供する
-	struct Vector3
-	{
+	struct Vector3{
 	public:
 		float x, y, z;
 
