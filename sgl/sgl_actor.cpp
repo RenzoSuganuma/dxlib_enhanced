@@ -76,26 +76,6 @@ void const Actor::RemoveComponent(const std::list<Component*>::iterator place)
 	components_.erase(place);
 }
 
-void const Actor::SetPosition(sgl::Vector3 newPos)
-{
-	position_ = newPos;
-}
-
-const sgl::Vector3 const Actor::GetPosition()
-{
-	return position_;
-}
-
-void const Actor::SetRotation(sgl::Vector3 newRot)
-{
-	rotation_ = newRot;
-}
-
-const sgl::Vector3 const Actor::GetRotation()
-{
-	return rotation_;
-}
-
 void const Actor::SetPlacedLevel(const Level* level)
 {
 	placedLevel_ = const_cast<Level*>(level);

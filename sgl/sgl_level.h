@@ -1,9 +1,11 @@
 ﻿#pragma once
 #include "list"
+#include "memory"
+#include "sgl_lang_extention.h"
 // 前方定義
 class Actor;
 // Unityでいうシーン、すべてのアクタが存在するクラス。（構造体でもいいかも）
-class Level final {
+struct Level final {
 private:
 	std::list< Actor* > objects_;
 
@@ -14,6 +16,8 @@ public:
 	static Level* Create() {
 		return new Level;
 	}
+
+	DEF_Create_shared_ptr(Level)
 
 	void const MainLoopEntry();
 	void const MainLoopUpdate(float deltaTime);

@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include "memory"
+#include "sgl_lang_extention.h"
 // 前方定義
 class Actor;
 // アクターへ機能を追加する際にこれに機能の実装をしてアクタへアタッチする
@@ -20,6 +22,8 @@ public:
 	static Component* Create() {
 		return new Component;
 	}
+	
+	DEF_Create_shared_ptr(Component)
 
 	void Begin();
 	void Tick(float deltaTime);

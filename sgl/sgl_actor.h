@@ -1,12 +1,13 @@
 ﻿#pragma once
-#include "list"
-#include "string"
 #include "DxLib.h"
-#include "sgl_vector3.h"
+#include "list"
+#include "memory"
 #include "sgl_lang_extention.h"
+#include "sgl_vector3.h"
+#include "string"
 class Level;
 class Component;
-// ゲーム内のオブジェクトとして扱うクラスの基底クラス
+// ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで
 class Actor {
 protected:
 	std::list< Component* > components_;
@@ -38,15 +39,13 @@ public:
 	static Actor* Create() {
 		return new Actor;
 	}
+
+	DEF_Create_shared_ptr(Actor)
 	/*  */
 	//
 	std::list< Component* >::iterator
 		const AddComponent(Component* component);
 	void const RemoveComponent(const std::list<Component*>::iterator place);
-	void const SetPosition(sgl::Vector3 newPos);
-	const sgl::Vector3 const GetPosition();
-	void const SetRotation(sgl::Vector3 newRot);
-	const sgl::Vector3 const GetRotation();
 	void const SetPlacedLevel(const Level* level);
 	/* templates */
 	//

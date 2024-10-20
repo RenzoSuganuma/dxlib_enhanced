@@ -14,9 +14,9 @@
 // 名前空間を省略したい
 using sgl::DxUtil;
 // ゲーム変数宣言---
-auto level = Level::Create();
-auto actor = Actor::Create();
-auto component = Component::Create();
+auto level = Level::CreateShared();
+auto actor = Actor::CreateShared();
+auto component = Component::CreateShared();
 DxOBB obbA =
 DirectX::BoundingOrientedBox(
 	DxUtil::xm_Float3(0),
@@ -35,8 +35,8 @@ DirectX::BoundingOrientedBox(
 void gameStart() {
 	srand(time(0));
 	// ゲーム変数セットアップ---
-	actor->AddComponent(component);
-	level->AddActor(actor);
+	actor->AddComponent(component.get());
+	level->AddActor(actor.get());
 	level->MainLoopEntry();
 }
 
@@ -59,7 +59,6 @@ void gameMain(float delta_time) {
 // ゲーム終了時に１度だけ実行されます
 void gameEnd() {
 	level->MainLoopExit();
-	delete level;
 }
 
 
