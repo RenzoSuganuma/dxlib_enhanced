@@ -152,7 +152,10 @@
     <ClCompile Include="..\sgl\sgl_component.cpp" />
     <ClCompile Include="..\sgl\sgl_inputHandler.cpp" />
     <ClCompile Include="..\sgl\sgl_level.cpp" />
+    <ClCompile Include="..\sgl\sgl_smTransition.cpp" />
     <ClCompile Include="..\sgl\sgl_soundHandler.cpp" />
+    <ClCompile Include="..\sgl\sgl_stateMachine.cpp" />
+    <ClCompile Include="..\sgl\sgl_stateMachineBehaviour.cpp" />
     <ClCompile Include="..\sgl\sgl_windowHandler.cpp" />
     <ClCompile Include="ManagedDxlGame.cpp" />
     <ClCompile Include="program\dxe\dxe.cpp" />
@@ -228,7 +231,10 @@
     <ClInclude Include="..\sgl\sgl_inputHandler.h" />
     <ClInclude Include="..\sgl\sgl_lang_extention.h" />
     <ClInclude Include="..\sgl\sgl_level.h" />
+    <ClInclude Include="..\sgl\sgl_smTransition.h" />
     <ClInclude Include="..\sgl\sgl_soundHandler.h" />
+    <ClInclude Include="..\sgl\sgl_stateMachine.h" />
+    <ClInclude Include="..\sgl\sgl_stateMachineBehaviour.h" />
     <ClInclude Include="..\sgl\sgl_vector3.h" />
     <ClInclude Include="..\sgl\sgl_windowHandler.h" />
     <ClInclude Include="program\dxe\dxe.h" />
