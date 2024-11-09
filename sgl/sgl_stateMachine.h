@@ -1,7 +1,6 @@
 #pragma once
 
 #include "map"
-#include "set"
 #include "list"
 #include "string"
 #include "sgl_smTransition.h"
@@ -11,8 +10,8 @@
 // 有限オートマトンの機能を提供する
 class StateMachine {
 	std::map< std::string, int > transitions_;
-	std::set< StateMachineBehaviour* > behaviours_;
-	std::set< SMTransition* > transitions_;
+	std::list< StateMachineBehaviour* > behaviours_;
+	std::list< SMTransition* > transitions_;
 	StateMachineBehaviour* currentBehaviour_;
 	StateMachineBehaviour* currentYieldedBehaviour_;
 	bool isPausing_;
