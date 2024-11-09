@@ -251,12 +251,6 @@
     <ClCompile Include="..\sgl\sgl_stateMachine.cpp">
       <Filter>program\[005]sgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\sgl\sgl_stateMachineBehaviour.cpp">
-      <Filter>program\[005]sgl</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sgl\sgl_smTransition.cpp">
-      <Filter>program</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManagedDxlGame.rc">
@@ -614,6 +608,8 @@
     <ClInclude Include="..\sgl\sgl_stateMachineBehaviour.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\sgl\sgl_smTransition.h" />
+    <ClInclude Include="..\sgl\sgl_smTransition.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

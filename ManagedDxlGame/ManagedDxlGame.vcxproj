@@ -92,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -106,6 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,10 +154,8 @@
     <ClCompile Include="..\sgl\sgl_component.cpp" />
     <ClCompile Include="..\sgl\sgl_inputHandler.cpp" />
     <ClCompile Include="..\sgl\sgl_level.cpp" />
-    <ClCompile Include="..\sgl\sgl_smTransition.cpp" />
     <ClCompile Include="..\sgl\sgl_soundHandler.cpp" />
     <ClCompile Include="..\sgl\sgl_stateMachine.cpp" />
-    <ClCompile Include="..\sgl\sgl_stateMachineBehaviour.cpp" />
     <ClCompile Include="..\sgl\sgl_windowHandler.cpp" />
     <ClCompile Include="ManagedDxlGame.cpp" />
     <ClCompile Include="program\dxe\dxe.cpp" />

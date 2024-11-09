@@ -46,12 +46,14 @@ void gameStart() {
 void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
 	level->MainLoopUpdate(delta_time);
-	if (sgl::Overlaps::CheckOBBOverlapDX(obbA, obbB)) {
+	/*if (sgl::Overlaps::CheckOBBOverlapDX(obbA, obbB)) {
 		DrawString(10, 10, "yes", -1);
 	}
 	else {
 		DrawString(10, 10, "no", -1);
-	}
+	}*/
+
+
 }
 
 
