@@ -6,6 +6,10 @@ void const StateMachine::ResistBehaviours(std::list<StateMachineBehaviour*> beha
 	behaviours_ = behaviours;
 	if (currentBehaviour_ == nullptr) currentBehaviour_ = (*behaviours_.begin());
 }
+// ƒrƒwƒCƒrƒA‚ð“o˜^‚·‚é
+void const StateMachine::ResistBehaviour(StateMachineBehaviour* behaviours) {
+	behaviours_.emplace_back(behaviours);
+}
 // ‘JˆÚ‚ð“o˜^‚·‚é
 void const StateMachine::MakeTransition(StateMachineBehaviour* from, StateMachineBehaviour* to, std::string name) {
 	if (!transitionsName_Id_.contains(name)) {

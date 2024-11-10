@@ -10,21 +10,24 @@
 // 有限オートマトンの機能を提供する
 class StateMachine {
 	std::map< std::string, int > transitionsName_Id_;
-	std::list< StateMachineBehaviour* > behaviours_;
+	std::list< StateMachineBehaviour* > behaviours_; /* これは外部からポインタのコピーが渡される。スマートポインタの可能性もあるので解放をしない */
 	std::list< SMTransition* > transitions_;
-	StateMachineBehaviour* currentBehaviour_ = nullptr;
-	StateMachineBehaviour* currentYieldedBehaviour_ = nullptr;
+	StateMachineBehaviour* currentBehaviour_ = nullptr; /* これは外部からポインタのコピーが渡される。スマートポインタの可能性もあるので解放をしない */
+	StateMachineBehaviour* currentYieldedBehaviour_ = nullptr; /* これは外部からポインタのコピーが渡される。スマートポインタの可能性もあるので解放をしない */
 	bool isPausing_;
 	bool isYieldToEvent_;
 
 public:
 	bool IsPaused() { return isPausing_; }
+	int BehavioursCount() { return behaviours_.size(); }
 	StateMachineBehaviour* CurrentBehaviour() { return currentBehaviour_; }
 	StateMachineBehaviour* CurrentYieldedEvent() { return currentYieldedBehaviour_; }
 
 
 	// 配列で登録をする
 	void const ResistBehaviours(std::list<StateMachineBehaviour*>  behaviours);
+	// ビヘイビアを登録する
+	void const ResistBehaviour(StateMachineBehaviour* behaviours);
 	// 遷移を登録する
 	void const MakeTransition(StateMachineBehaviour* from, StateMachineBehaviour* to, std::string name);
 	// 指定した遷移名のトランジションを更新してみる
@@ -41,5 +44,12 @@ public:
 	void const Start();
 	// 有限オートマトンを停止する
 	void const Pause();
+	// 破棄（解放）処理
+	void const Dispose() {
+		transitionsName_Id_.clear(); // 解放
+		transitions_.clear(); // 解放
+		currentBehaviour_ = nullptr;
+		currentYieldedBehaviour_ = nullptr;
+	}
 };
 
