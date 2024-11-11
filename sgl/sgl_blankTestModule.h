@@ -1,8 +1,11 @@
 #pragma once
 #include "DxLib.h"
 #include "sgl_actor.h"
+#include "sgl_lang_extention.h"
 class BlankTestModule : public Actor
 {
+public:
+	DEF_Create_shared_ptr(BlankTestModule)
 protected:
 	// ƒ‚ƒWƒ…[ƒ‹‚Ì‰Šú‰»
 	void Initialize() override;
