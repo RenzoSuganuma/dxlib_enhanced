@@ -1,10 +1,10 @@
 ﻿#pragma once
-#include "DxLib.h"
 #include "list"
 #include "memory"
-#include "sgl_lang_extention.h"
-#include "sgl_vector3.h"
 #include "string"
+#include "DxLib.h"
+#include "sgl_vector3.h"
+#include "sgl_lang_extention.h"
 class Level;
 class Component;
 // ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで
@@ -17,22 +17,37 @@ protected:
 	std::string name_ = "";
 	bool enabled_ = true;
 	/* virtual functions FOR override */
-	virtual void Begin_();
-	virtual void Tick_(float deltaTime);
-	virtual void End_();
-	virtual void Draw_();
+	// モジュールの初期化
+	virtual void Initialize();
+	// モジュールの更新
+	virtual void Update(float delta_time);
+	// モジュールの描画
+	virtual void Draw();
+	// モジュールの内での解放
+	virtual void Release();
+	// モジュールの破棄
+	virtual void Finalize();
 	/* auto properties */
+public:
 	AutoProperty(sgl::Vector3, Position, position_)
 		AutoProperty(sgl::Vector3, Rotation, rotation_)
 		Getter(std::string, Name, name_)
+		DEF_Create_shared_ptr(Actor)
 public:
 
 	Actor();
 	~Actor();
-	void Begin();
-	void Tick(float deltaTime);
-	void End();
-	void Draw();
+
+	// モジュールの初期化
+	void __initialize();
+	// モジュールの更新
+	void __update(float delta_time);
+	// モジュールの描画
+	void __draw();
+	// モジュール内での解放
+	void __release();
+	// モジュールの破棄
+	void __finalize();
 
 	/* statics */
 	//
@@ -40,11 +55,8 @@ public:
 		return new Actor;
 	}
 
-	DEF_Create_shared_ptr(Actor)
-	/*  */
-	//
 	std::list< Component* >::iterator
-		const AddComponent(Component* component);
+	const AddComponent(Component* component);
 	void const RemoveComponent(const std::list<Component*>::iterator place);
 	void const SetPlacedLevel(const Level* level);
 	/* templates */

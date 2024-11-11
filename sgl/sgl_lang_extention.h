@@ -31,7 +31,7 @@ type name; \
 const type& get##name()\
 {\
 	return rawValue;\
-} \
+}
 
 // C#のセッターを再現。左から型、変数名（public）、値の本体
 #define Setter( type , name , rawValue ) \
@@ -39,10 +39,10 @@ public: \
 void set##name( const type& value )\
 {\
 	 rawValue = value;\
-}\
+}
 
 // std::shared_ptr<T>の宣言を省略したい
 #define DEF_Create_shared_ptr(type)\
 static std::shared_ptr<type> CreateShared() {\
 return std::make_shared<type>();\
-}\
+}

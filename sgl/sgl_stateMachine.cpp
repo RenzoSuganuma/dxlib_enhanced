@@ -12,7 +12,7 @@ void const StateMachine::ResistBehaviour(StateMachineBehaviour* behaviours) {
 }
 // ‘JˆÚ‚ð“o˜^‚·‚é
 void const StateMachine::MakeTransition(StateMachineBehaviour* from, StateMachineBehaviour* to, std::string name) {
-	if (!transitionsName_Id_.contains(name)) {
+	if (transitionsName_Id_.find(name) == transitionsName_Id_.end()) {
 		transitionsName_Id_.insert(std::make_pair(name, transitionsName_Id_.size()));
 	}
 

@@ -2,37 +2,43 @@
 #include "sgl_actor.h"
 #include "sgl_component.h"
 
-Component::Component(){}
-Component::~Component(){}
+Component::Component() {}
+Component::~Component() {}
 
 #pragma region virtual-functions
-void Component::Begin_(){}
-void Component::Tick_(float deltaTime){}
-void Component::End_(){}
-void Component::Draw_(){}
+void Component::Initialize() {}
+void Component::Update(float deltaTime) {}
+void Component::Finalize() {}
+void Component::Release() {}
+void Component::Draw() {}
 #pragma endregion
 
-void Component::Begin()
+void Component::__initialize()
 {
 	enabled_ = true;
-	Begin_();
+	Initialize();
 }
 
-void Component::Tick(float deltaTime)
+void Component::__update(float deltaTime)
 {
-	Tick_(deltaTime);
+	Update(deltaTime);
 }
 
-void Component::End()
+void Component::__finalize()
 {
 	attachedActor_ = nullptr;
 	enabled_ = false;
-	End_();
+	Finalize();
 }
 
-void Component::Draw()
+void Component::__draw()
 {
-	Draw_();
+	Draw();
+}
+
+void Component::__release()
+{
+	Release();
 }
 
 const Actor* const Component::GetActor() const

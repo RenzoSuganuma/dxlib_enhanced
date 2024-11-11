@@ -7,50 +7,37 @@ Actor::Actor() {}
 Actor::~Actor() {}
 
 #pragma region virtual-funcitons
-void Actor::Begin_() {}
-void Actor::Tick_(float deltaTime) {}
-void Actor::End_() {}
-void Actor::Draw_() {}
+void Actor::Initialize() {}
+void Actor::Update(float deltaTime) {}
+void Actor::Release() {}
+void Actor::Finalize() {}
+void Actor::Draw() {}
 #pragma endregion
 
-void Actor::Begin()
+void Actor::__initialize()
 {
 	auto it = components_.begin();
 	while (it != components_.end())
 	{
-		(*it)->Begin();
+		(*it)->Initialize();
 		it++;
 	}
 	enabled_ = true;
-	Begin_();
+	Initialize();
 }
 
-void Actor::Tick(float deltaTime)
+void Actor::__update(float deltaTime)
 {
 	auto it = components_.begin();
 	while (it != components_.end())
 	{
-		(*it)->Tick(deltaTime);
+		(*it)->Update(deltaTime);
 		it++;
 	}
-	Tick_(deltaTime);
+	Update(deltaTime);
 }
 
-void Actor::End()
-{
-	auto it = components_.begin();
-	while (it != components_.end())
-	{
-		(*it)->End();
-		it++;
-	}
-	components_.clear();
-	enabled_ = false;
-	placedLevel_ = nullptr;
-	End_();
-}
-
-void Actor::Draw()
+void Actor::__draw()
 {
 	auto it = components_.begin();
 	while (it != components_.end())
@@ -58,8 +45,28 @@ void Actor::Draw()
 		(*it)->Draw();
 		it++;
 	}
-	Draw_();
+	Draw();
 }
+
+void Actor::__release()
+{
+
+}
+
+void Actor::__finalize()
+{
+	auto it = components_.begin();
+	while (it != components_.end())
+	{
+		(*it)->Finalize();
+		it++;
+	}
+	components_.clear();
+	enabled_ = false;
+	placedLevel_ = nullptr;
+	Finalize();
+}
+
 
 std::list< Component* >::iterator
 const Actor::AddComponent(Component* component)
@@ -80,4 +87,3 @@ void const Actor::SetPlacedLevel(const Level* level)
 {
 	placedLevel_ = const_cast<Level*>(level);
 }
-

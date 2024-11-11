@@ -116,11 +116,11 @@ const bool const InputHandler::GetInputCanceled(const KeyboardKey key)
 	return canceled_[static_cast<int>(key)];
 }
 
-void InputHandler::Begin_()
+void InputHandler::Initialize()
 {
 }
 
-void InputHandler::Tick_(float deltaTime)
+void InputHandler::Update(float deltaTime)
 {
 #pragma region -移動軸入力-
 	if (CheckHitKey(KEY_INPUT_A) == 1)	// left
@@ -165,6 +165,14 @@ void InputHandler::Tick_(float deltaTime)
 	CheckInputCanceled();
 }
 
-void InputHandler::End_()
+void InputHandler::Draw()
+{
+}
+
+void InputHandler::Release()
+{
+}
+
+void InputHandler::Finalize()
 {
 }

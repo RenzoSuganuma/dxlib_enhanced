@@ -48,8 +48,15 @@ public:
 	const bool const GetInputStarted(const KeyboardKey key);
 	const bool const GetInputPerformed(const KeyboardKey key);
 	const bool const GetInputCanceled(const KeyboardKey key);
-	void Begin_() override;
-	void Tick_(float deltaTime)  override;
-	void End_()override;
+	// モジュールの初期化
+	void Initialize() override;
+	// モジュールの更新
+	void Update(float delta_time) override;
+	// モジュールの描画
+	void Draw() override;
+	// モジュールの内での解放
+	void Release() override;
+	// モジュールの破棄
+	void Finalize() override;
 };
 

@@ -92,7 +92,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -107,7 +106,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -122,7 +120,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -139,7 +136,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -225,12 +221,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\sgl\sgl_actor.h" />
+    <ClInclude Include="..\sgl\sgl_blankTestModule.h" />
     <ClInclude Include="..\sgl\sgl_collisionUtility.h" />
     <ClInclude Include="..\sgl\sgl_component.h" />
     <ClInclude Include="..\sgl\sgl_directxUtility.h" />
     <ClInclude Include="..\sgl\sgl_inputHandler.h" />
     <ClInclude Include="..\sgl\sgl_lang_extention.h" />
     <ClInclude Include="..\sgl\sgl_level.h" />
+    <ClInclude Include="..\sgl\sgl_managableModules.h" />
     <ClInclude Include="..\sgl\sgl_smTransition.h" />
     <ClInclude Include="..\sgl\sgl_soundHandler.h" />
     <ClInclude Include="..\sgl\sgl_stateMachine.h" />

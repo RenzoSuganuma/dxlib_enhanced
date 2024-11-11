@@ -9,9 +9,10 @@
 #include "../../sgl/sgl_level.h"
 #include "../../sgl/sgl_actor.h"
 #include "../../sgl/sgl_component.h"
+#include "../../sgl/sgl_blankTestModule.h"
 // ゲーム変数宣言---
 auto level = Level::CreateShared();
-auto actor = Actor::CreateShared();
+auto actor = BlankTestModule::CreateShared();
 auto component = Component::CreateShared();
 
 //------------------------------------------------------------------------------------------------------------
@@ -19,7 +20,6 @@ auto component = Component::CreateShared();
 void gameStart() {
 	srand(time(0));
 	// ゲーム変数セットアップ---
-	actor->AddComponent(component.get());
 	level->AddActor(actor.get());
 	level->MainLoopEntry();
 }

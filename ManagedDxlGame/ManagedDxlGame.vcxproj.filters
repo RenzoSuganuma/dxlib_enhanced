@@ -611,5 +611,11 @@
     <ClInclude Include="..\sgl\sgl_smTransition.h">
       <Filter>program\[005]sgl</Filter>
     </ClInclude>
+    <ClInclude Include="..\sgl\sgl_managableModules.h">
+      <Filter>program\[005]sgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_blankTestModule.h">
+      <Filter>program\[006]game_sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
