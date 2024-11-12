@@ -7,7 +7,7 @@
 #include "sgl_lang_extention.h"
 #include "sgl_stateMachineBehaviour.h"
 
-// 有限オートマトンの機能を提供する
+// 有限オートマトンの機能を提供する ※C++20のバージョン以上
 class StateMachine {
 	std::map< std::string, int > transitionsName_Id_;
 	std::list< StateMachineBehaviour* > behaviours_; /* これは外部からポインタのコピーが渡される。スマートポインタの可能性もあるので解放をしない */
