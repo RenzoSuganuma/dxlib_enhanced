@@ -50,7 +50,14 @@ void Actor::__draw()
 
 void Actor::__release()
 {
-
+	auto it = components_.begin();
+	while (it != components_.end())
+	{
+		(*it)->Release();
+		it++;
+	}
+	components_.clear();
+	Release();
 }
 
 void Actor::__finalize()
@@ -61,7 +68,6 @@ void Actor::__finalize()
 		(*it)->Finalize();
 		it++;
 	}
-	components_.clear();
 	enabled_ = false;
 	placedLevel_ = nullptr;
 	Finalize();

@@ -5,7 +5,7 @@
 Level::Level() {}
 Level::~Level() {}
 
-void const Level::MainLoopEntry()
+void const Level::MainLoopInitialize()
 {
 	auto itr = objects_.begin();
 	while (itr != objects_.end())
@@ -26,12 +26,32 @@ void const Level::MainLoopUpdate(float deltaTime)
 	}
 }
 
-void const Level::MainLoopExit()
+void const Level::MainLoopDraw()
+{
+	auto itr = objects_.begin();
+	while (itr != objects_.end())
+	{
+		(*itr)->__draw();
+		itr++;
+	}
+}
+
+void const Level::MainLoopFinalize()
 {
 	auto it = objects_.begin();
 	while (it != objects_.end())
 	{
 		(*it)->__finalize();
+		++it;
+	}
+}
+
+void const Level::MainLoopRelease()
+{
+	auto it = objects_.begin();
+	while (it != objects_.end())
+	{
+		(*it)->__release();
 		++it;
 	}
 	objects_.clear();

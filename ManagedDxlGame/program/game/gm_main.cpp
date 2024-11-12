@@ -20,7 +20,7 @@ void gameStart() {
 	srand(time(0));
 	// ゲーム変数セットアップ---
 	level->AddActor(actor.get());
-	level->MainLoopEntry();
+	level->MainLoopInitialize();
 }
 
 
@@ -29,13 +29,15 @@ void gameStart() {
 void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
 	level->MainLoopUpdate(delta_time);
+	level->MainLoopDraw();
 }
 
 
 //------------------------------------------------------------------------------------------------------------
 // ゲーム終了時に１度だけ実行されます
 void gameEnd() {
-	level->MainLoopExit();
+	level->MainLoopFinalize();
+	level->MainLoopRelease();
 }
 
 

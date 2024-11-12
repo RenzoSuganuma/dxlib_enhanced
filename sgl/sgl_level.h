@@ -19,9 +19,11 @@ public:
 
 	DEF_Create_shared_ptr(Level)
 
-	void const MainLoopEntry();
+	void const MainLoopInitialize();
 	void const MainLoopUpdate(float deltaTime);
-	void const MainLoopExit();
+	void const MainLoopDraw();
+	void const MainLoopFinalize();
+	void const MainLoopRelease();
 	const std::list< Actor* >::iterator
 		const AddActor(const Actor * obj);
 	void const RemoveActor(const Actor * obj);

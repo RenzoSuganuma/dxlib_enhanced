@@ -6,15 +6,15 @@ class IManagableModule {
 	/* --- システム側からコールする関数 --- */
 public:
 	// モジュールの初期化
-	virtual void __initialize() = 0;
+	virtual void __initialize() = 0;				// order - 0
 	// モジュールの更新
-	virtual void __update(float delta_time) = 0;
+	virtual void __update(float delta_time) = 0;	// order - 1
 	// モジュールの描画
-	virtual void __draw() = 0;
-	// モジュール内での解放
-	virtual void __release() = 0;
+	virtual void __draw() = 0;						// order - 2
 	// モジュールの破棄
-	virtual void __finalize() = 0;
+	virtual void __finalize() = 0;					// order - 3
+	// モジュール内での解放
+	virtual void __release() = 0;					// order - 4
 
 	/*
 	// モジュールの初期化
@@ -28,7 +28,7 @@ public:
 	// モジュールの破棄
 	void __finalize();
 	*/
-	
+
 	/* --- ユーザー定義モジュールでoverrideする関数 --- */
 
 protected:
