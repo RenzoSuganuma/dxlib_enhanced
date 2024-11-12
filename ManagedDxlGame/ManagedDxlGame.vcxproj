@@ -200,6 +200,7 @@
     <ClCompile Include="program\dxe\mesh\dxe_mesh_base.cpp" />
     <ClCompile Include="program\dxe\mesh\dxe_mesh_mtrl_gui_controller.cpp" />
     <ClCompile Include="program\dxe\OBJLoader.cpp" />
+    <ClCompile Include="program\example\sgl\sgl_task_system_ex.cpp" />
     <ClCompile Include="program\game\gm_main.cpp" />
     <ClCompile Include="program\library\json11.cpp" />
     <ClCompile Include="program\library\tnl_font_texture.cpp" />

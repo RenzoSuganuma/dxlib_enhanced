@@ -1,31 +1,31 @@
-ï»¿#if 1
+#if 0
 
 
 #include <time.h>
 #include <string>
 #include "../dxe/dxe.h"
 #include "gm_main.h"
-// sglãƒ©ã‚¤ãƒ–ãƒ©ãƒªå±•é–‹---
+// sglƒ‰ƒCƒuƒ‰ƒŠ“WŠJ---
 #include "../../sgl/sgl_level.h"
 #include "../../sgl/sgl_actor.h"
 #include "../../sgl/sgl_component.h"
-// ã‚²ãƒ¼ãƒ å¤‰æ•°å®£è¨€---
+// ƒQ[ƒ€•Ï”éŒ¾---
 auto level = Level::CreateShared();
 auto actor = Actor::CreateShared();
 auto component = Component::CreateShared();
 
 //------------------------------------------------------------------------------------------------------------
-// ã‚²ãƒ¼ãƒ èµ·å‹•æ™‚ã«ï¼‘åº¦ã ã‘å®Ÿè¡Œã•ã‚Œã¾ã™
+// ƒQ[ƒ€‹N“®Žž‚É‚P“x‚¾‚¯ŽÀs‚³‚ê‚Ü‚·
 void gameStart() {
 	srand(time(0));
-	// ã‚²ãƒ¼ãƒ å¤‰æ•°ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—---
+	// ƒQ[ƒ€•Ï”ƒZƒbƒgƒAƒbƒv---
 	level->AddActor(actor.get());
 	level->MainLoopEntry();
 }
 
 
 //------------------------------------------------------------------------------------------------------------
-// æ¯Žãƒ•ãƒ¬ãƒ¼ãƒ å®Ÿè¡Œã•ã‚Œã¾ã™
+// –ˆƒtƒŒ[ƒ€ŽÀs‚³‚ê‚Ü‚·
 void gameMain(float delta_time) {
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
 	level->MainLoopUpdate(delta_time);
@@ -33,7 +33,7 @@ void gameMain(float delta_time) {
 
 
 //------------------------------------------------------------------------------------------------------------
-// ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚ã«ï¼‘åº¦ã ã‘å®Ÿè¡Œã•ã‚Œã¾ã™
+// ƒQ[ƒ€I—¹Žž‚É‚P“x‚¾‚¯ŽÀs‚³‚ê‚Ü‚·
 void gameEnd() {
 	level->MainLoopExit();
 }

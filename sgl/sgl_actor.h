@@ -5,10 +5,11 @@
 #include "DxLib.h"
 #include "sgl_vector3.h"
 #include "sgl_lang_extention.h"
+#include "sgl_managableModules.h"
 class Level;
 class Component;
 // ゲーム内のオブジェクトとして扱うクラスの基底クラスインスタンスはスマートポインタで
-class Actor {
+class Actor : public IManagableModule {
 protected:
 	std::list< Component* > components_;
 	sgl::Vector3 position_{ 0 };

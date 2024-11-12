@@ -54,6 +54,9 @@
     <Filter Include="program\[006]game_sources">
       <UniqueIdentifier>{d3ebe9d1-5dc9-4a80-824d-9af14b687f86}</UniqueIdentifier>
     </Filter>
+    <Filter Include="program\[002] example\[005]sgl">
+      <UniqueIdentifier>{082f5c5c-5ee5-4855-853d-b2f7156c6d84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ManagedDxlGame.cpp">
@@ -250,6 +253,9 @@
     </ClCompile>
     <ClCompile Include="..\sgl\sgl_stateMachine.cpp">
       <Filter>program\[005]sgl</Filter>
+    </ClCompile>
+    <ClCompile Include="program\example\sgl\sgl_task_system_ex.cpp">
+      <Filter>program\[002] example\[005]sgl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
