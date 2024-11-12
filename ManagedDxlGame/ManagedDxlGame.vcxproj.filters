@@ -257,6 +257,9 @@
     <ClCompile Include="program\example\sgl\sgl_task_system_ex.cpp">
       <Filter>program\[002] example\[005]sgl</Filter>
     </ClCompile>
+    <ClCompile Include="..\sgl\sgl_fpsCamera.cpp">
+      <Filter>program\[005]sgl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManagedDxlGame.rc">
@@ -622,6 +625,9 @@
     </ClInclude>
     <ClInclude Include="..\sgl\sgl_blankTestModule.h">
       <Filter>program\[006]game_sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sgl\sgl_fpsCamera.h">
+      <Filter>program\[005]sgl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
