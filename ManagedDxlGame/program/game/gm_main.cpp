@@ -12,6 +12,7 @@
 auto level = Level::CreateShared();
 std::shared_ptr<FPSCamera> camera;
 
+
 //------------------------------------------------------------------------------------------------------------
 // ゲーム起動時に１度だけ実行されます
 void gameStart() {
@@ -28,6 +29,7 @@ void gameMain(float delta_time) {
 	camera.get()->Update(delta_time);
 	dxe::DrawGridGround(camera, 50, 20, -1);
 	dxe::DrawFpsIndicator({ 10, DXE_WINDOW_HEIGHT - 10 });
+
 	level->MainLoopUpdate(delta_time);
 	level->MainLoopDraw();
 }
