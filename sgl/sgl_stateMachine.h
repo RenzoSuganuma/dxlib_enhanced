@@ -18,8 +18,8 @@ class StateMachine {
 	bool isYieldToEvent_;
 
 public:
-	bool IsPaused() { return isPausing_; }
-	int BehavioursCount() { return behaviours_.size(); }
+	bool isPaused() { return isPausing_; }
+	int behaviourCount() { return behaviours_.size(); }
 	StateMachineBehaviour* CurrentBehaviour() { return currentBehaviour_; }
 	StateMachineBehaviour* CurrentYieldedEvent() { return currentYieldedBehaviour_; }
 

@@ -5,7 +5,7 @@
 Level::Level() {}
 Level::~Level() {}
 
-void const Level::MainLoopInitialize()
+void  Level::Initialize()
 {
 	auto itr = objects_.begin();
 	while (itr != objects_.end())
@@ -15,7 +15,7 @@ void const Level::MainLoopInitialize()
 	}
 }
 
-void const Level::MainLoopUpdate(float deltaTime)
+void  Level::Update(float deltaTime)
 {
 	auto itr = objects_.begin();
 	while (itr != objects_.end())
@@ -26,7 +26,7 @@ void const Level::MainLoopUpdate(float deltaTime)
 	}
 }
 
-void const Level::MainLoopDraw()
+void  Level::Draw()
 {
 	auto itr = objects_.begin();
 	while (itr != objects_.end())
@@ -36,7 +36,7 @@ void const Level::MainLoopDraw()
 	}
 }
 
-void const Level::MainLoopFinalize()
+void  Level::Finalize()
 {
 	auto it = objects_.begin();
 	while (it != objects_.end())
@@ -46,7 +46,7 @@ void const Level::MainLoopFinalize()
 	}
 }
 
-void const Level::MainLoopRelease()
+void  Level::Release()
 {
 	auto it = objects_.begin();
 	while (it != objects_.end())
@@ -58,7 +58,7 @@ void const Level::MainLoopRelease()
 }
 
 const std::list< Actor* >::iterator
-const Level::AddActor(const Actor * obj)
+const Level::AddActor(const Actor* obj)
 {
 	const_cast<Actor*>(obj)->SetPlacedLevel(this);
 	objects_.emplace_back(const_cast<Actor*>(obj));

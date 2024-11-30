@@ -2,10 +2,11 @@
 #include "list"
 #include "memory"
 #include "sgl_lang_extention.h"
+#include "sgl_managableModules.h"
 // 前方定義
 class Actor;
 // Unityでいうシーン、すべてのアクタが存在するクラス。（構造体でもいいかも）
-struct Level final {
+struct Level final : IManagableModule {
 private:
 	std::list< Actor* > objects_;
 
@@ -19,11 +20,11 @@ public:
 
 	DEF_Create_shared_ptr(Level)
 
-	void const MainLoopInitialize();
-	void const MainLoopUpdate(float deltaTime);
-	void const MainLoopDraw();
-	void const MainLoopFinalize();
-	void const MainLoopRelease();
+	void  Initialize();
+	void  Update(float deltaTime);
+	void  Draw();
+	void  Finalize();
+	void  Release();
 	const std::list< Actor* >::iterator
 		const AddActor(const Actor * obj);
 	void const RemoveActor(const Actor * obj);

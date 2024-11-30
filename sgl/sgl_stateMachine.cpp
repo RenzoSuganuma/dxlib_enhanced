@@ -32,7 +32,7 @@ void const StateMachine::UpdateTransition(std::string name, bool& condition, boo
 			}
 		}
 		else {
-			currentBehaviour_->Tick();
+			currentBehaviour_->Update();
 		}
 	}
 }
@@ -41,8 +41,8 @@ void const StateMachine::UpdateEventsYield() {
 	if (isPausing_) return;
 
 	if (isYieldToEvent_) {
-		currentYieldedBehaviour_->Tick();
-		if (!currentYieldedBehaviour_->YieldManually()) {
+		currentYieldedBehaviour_->Update();
+		if (!currentYieldedBehaviour_->yieldManually()) {
 			isYieldToEvent_ = false;
 		}
 	}

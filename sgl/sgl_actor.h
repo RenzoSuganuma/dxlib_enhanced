@@ -14,7 +14,7 @@ class Actor : public IManagableModule {
 protected:
 	std::list< Component* > components_;
 	tnl::Vector3 position_{ 0 };
-	tnl::Quaternion rotation_{ 0 };
+	tnl::Quaternion rotation_;
 	Level* placedLevel_ = nullptr;
 	std::string name_ = "";
 	bool enabled_ = true;

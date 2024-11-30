@@ -3,7 +3,7 @@
 #include "list"
 #include "string"
 #include "DxLib.h"
-#include "sgl_vector3.h"
+#include "tnl_vector3.h"
 #include "sgl_component.h"
 
 // 入力デバイスのタイプ
@@ -43,7 +43,6 @@ private:
 #pragma endregion
 
 public:
-	sgl::Vector3 moveVec_{ 0 };
 	const bool const GetInput(int inputAction, InputDeviceType inputType);
 	const bool const GetInputStarted(const KeyboardKey key);
 	const bool const GetInputPerformed(const KeyboardKey key);

@@ -240,7 +240,6 @@
     <ClInclude Include="..\sgl\sgl_soundHandler.h" />
     <ClInclude Include="..\sgl\sgl_stateMachine.h" />
     <ClInclude Include="..\sgl\sgl_stateMachineBehaviour.h" />
-    <ClInclude Include="..\sgl\sgl_vector3.h" />
     <ClInclude Include="..\sgl\sgl_windowHandler.h" />
     <ClInclude Include="program\dxe\dxe.h" />
     <ClInclude Include="program\dxe\dxe_camera.h" />

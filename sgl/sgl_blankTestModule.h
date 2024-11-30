@@ -8,26 +8,26 @@ public:
 	DEF_Create_shared_ptr(BlankTestModule)
 protected:
 	// モジュールの初期化
-	void Initialize() override;
+	void initialize() override;
 	// モジュールの更新
-	void Update(float delta_time) override;
+	void update(float delta_time) override;
 	// モジュールの描画
-	void Draw() override;
+	void draw() override;
 	// モジュールの内での解放
-	void Release() override;
+	void release() override;
 	// モジュールの破棄
-	void Finalize() override;
+	void finalize() override;
 };
 
 // モジュールの初期化
-void BlankTestModule::Initialize() {}
+void BlankTestModule::initialize() {}
 // モジュールの更新
-void BlankTestModule::Update(float delta_time) {
+void BlankTestModule::update(float delta_time) {
 	DrawString(10, 10, "test__", -1);
 }
 // モジュールの描画
-void BlankTestModule::Draw() {}
+void BlankTestModule::draw() {}
 // モジュールの内での解放
-void BlankTestModule::Release() {}
+void BlankTestModule::release() {}
 // モジュールの破棄
-void BlankTestModule::Finalize() {}
+void BlankTestModule::finalize() {}
