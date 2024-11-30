@@ -8,7 +8,7 @@ class Actor;
 // Unityでいうシーン、すべてのアクタが存在するクラス。（構造体でもいいかも）
 struct Level final : IManagableModule {
 private:
-	std::list< Actor* > objects_;
+	std::list< Actor* > actors_;
 
 public:
 	Level();
@@ -25,6 +25,8 @@ public:
 	void  Draw();
 	void  Finalize();
 	void  Release();
+
+	void DrawActorList();
 	const std::list< Actor* >::iterator
 		const AddActor(const Actor * obj);
 	void const RemoveActor(const Actor * obj);
