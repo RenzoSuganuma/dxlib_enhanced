@@ -141,6 +141,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         dxe::SetDeltaTime(delta_time);
         gameMain(delta_time);
 
+        // 描画処理
+        gameRender();
+
         if (dxe::IsExitApplication()) break;
 
         // バックバッファをフリップ

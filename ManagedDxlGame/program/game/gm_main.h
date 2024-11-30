@@ -2,4 +2,5 @@
 
 void gameStart();
 void gameMain( float delta_time );
+void gameRender();
 void gameEnd();
