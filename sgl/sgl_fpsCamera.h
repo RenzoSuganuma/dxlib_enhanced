@@ -34,7 +34,7 @@ public:
 		m_rotation *= tnl::Quaternion::RotationAxis({ 0,1,0 }, tnl::ToRadian(vlook.x * 0.1f));
 		m_rotation *= tnl::Quaternion::RotationAxis(right(), tnl::ToRadian(vlook.y * 0.1f));
 		// 姿勢パラメータからターゲット座標とアッパーベクトルを計算
-		target_ = position_ + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
+		target_ = m_position + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
 		up_ = tnl::Vector3::TransformCoord({ 0, 1, 0 }, m_rotation);
 		dxe::Camera::update();
 	}
@@ -53,8 +53,8 @@ public:
 	inline tnl::Vector3 down() { return -up(); }
 
 	inline tnl::Vector3 forward() override {
-		target_ = position_ + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
-		return tnl::Vector3::Normalize(target_ - position_);
+		target_ = m_position + tnl::Vector3::TransformCoord({ 0, 0, 1 }, m_rotation);
+		return tnl::Vector3::Normalize(target_ - m_position);
 	}
 	inline tnl::Vector3 back() override { return -forward(); }
 	inline tnl::Vector3 left() override { return tnl::Vector3::Cross(forward(), up()); }
