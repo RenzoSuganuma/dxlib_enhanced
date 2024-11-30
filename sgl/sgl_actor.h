@@ -3,7 +3,8 @@
 #include "memory"
 #include "string"
 #include "DxLib.h"
-#include "sgl_vector3.h"
+#include "tnl_vector3.h"
+#include "tnl_quaternion.h"
 #include "sgl_lang_extention.h"
 #include "sgl_managableModules.h"
 class Level;
@@ -12,8 +13,8 @@ class Component;
 class Actor : public IManagableModule {
 protected:
 	std::list< Component* > components_;
-	sgl::Vector3 position_{ 0 };
-	sgl::Vector3 rotation_{ 0 };
+	tnl::Vector3 position_{ 0 };
+	tnl::Quaternion rotation_{ 0 };
 	Level* placedLevel_ = nullptr;
 	std::string name_ = "";
 	bool enabled_ = true;
@@ -30,8 +31,8 @@ protected:
 	virtual void Finalize();
 	/* auto properties */
 public:
-	AutoProperty(sgl::Vector3, Position, position_)
-		AutoProperty(sgl::Vector3, Rotation, rotation_)
+	AutoProperty(tnl::Vector3, Position, position_)
+		AutoProperty(tnl::Quaternion, Rotation, rotation_)
 		Getter(std::string, Name, name_)
 		DEF_Create_shared_ptr(Actor)
 public:
@@ -57,7 +58,7 @@ public:
 	}
 
 	std::list< Component* >::iterator
-	const AddComponent(Component* component);
+		const AddComponent(Component* component);
 	void const RemoveComponent(const std::list<Component*>::iterator place);
 	void const SetPlacedLevel(const Level* level);
 	/* templates */
