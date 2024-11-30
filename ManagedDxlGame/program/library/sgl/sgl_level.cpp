@@ -1,5 +1,5 @@
 ﻿#include "string"
-#include "../dxe/dxe.h"
+#include "../../dxe/dxe.h"
 #include "DxLib.h"
 #include "sgl_actor.h"
 #include "sgl_level.h"

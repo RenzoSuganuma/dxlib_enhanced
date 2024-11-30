@@ -1,7 +1,7 @@
 #pragma once
 #include "functional"
-#include "../dxe/dxe.h"
-#include "tnl_vector3.h"
+#include "../../dxe/dxe.h"
+#include "../tnl_vector3.h"
 #include "sgl_lang_extention.h"
 #include "sgl_managableModules.h"
 
